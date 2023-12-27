@@ -1,0 +1,7 @@
+<h1>Your Created Events</h1>
+
+<ul>
+<% @creator_events.each do |event| %>
+  <li><%= event.date %> - <%= event.location %></li>
+<% end %>
+</ul>

@@ -1,0 +1,21 @@
+<h1>Create Event</h1>
+
+<%= form_with model: @event do |form| %>
+    <div>
+        <%= form.label :date %>
+        <%= form.date_field :date %>
+    </div>
+
+    <div>
+        <%= form.label :location %>
+        <%= form.text_field :location %>
+    </div>
+
+    <div>
+        
+        <%= form.hidden_field :creator_id, :value => current_user.id %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
