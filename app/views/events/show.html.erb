@@ -1,4 +1,12 @@
+<%= render "nav" %>
+
 <h1>Event <%= @event.id %></h1>
 
 <%= @event.date %><br>
 <%= @event.location %>
+
+<ul>
+<% @event.event_attendees.each do |attendee| %>
+    <li><%= attendee.event_attendee %></li>
+<% end %>
+</ul>
